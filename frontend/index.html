@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>CodeGuard AI</title>
+
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+
+
+<script
+    src="https://unpkg.com/lucide@latest"
+></script>
+
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+
+    <div class="logo">
+
+        <i
+            data-lucide="code-2"
+            class="logo-icon"
+        ></i>
+
+        CodeGuard <span>AI</span>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#">
+            Home
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#how">
+            How It Works
+        </a>
+
+    </div>
+
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <div class="badge">
+
+            <i
+                data-lucide="sparkles"
+            ></i>
+
+            AI-Powered Code Analysis
+
+        </div>
+
+
+        <h1>
+
+            Find Code Risks<br>
+
+            <span>
+                Before They Become Problems.
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Analyze your code using Machine Learning
+            and detect potential Year 2038 (Y2038)
+            timestamp vulnerabilities.
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+
+    <!-- ANALYSIS CARD -->
+
+    <div class="analysis-card">
+
+
+        <!-- HEADER -->
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    <i
+                        data-lucide="search"
+                    ></i>
+
+                    Analyze Your Code
+
+                </h2>
+
+
+                <p>
+
+                    Paste your code below and let AI
+                    analyze its potential Y2038 risk.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                AI Model Ready
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CODE EDITOR -->
+
+        <div class="editor-top">
+
+
+            <div class="window-controls">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+
+            <select id="language">
+
+                <option value="C">
+                    C
+                </option>
+
+                <option value="C++">
+                    C++
+                </option>
+
+                <option value="Java">
+                    Java
+                </option>
+
+            </select>
+
+
+        </div>
+
+
+
+        <!-- CODE INPUT -->
+
+        <textarea
+            id="codeInput"
+            placeholder="// Paste your code here...
+
+Example:
+
+int timestamp = time(NULL);"
+        ></textarea>
+
+
+
+        <!-- BUTTON -->
+
+        <button
+            class="analyze-btn"
+            onclick="analyzeCode()"
+        >
+
+            <i
+                data-lucide="scan-search"
+            ></i>
+
+            Analyze Code
+
+        </button>
+
+
+
+        <!-- ================= RESULT ================= -->
+
+        <div
+            id="result"
+            class="result hidden"
+        >
+
+
+            <!-- RESULT HEADER -->
+
+            <div class="result-header">
+
+
+                <h2>
+                    Analysis Result
+                </h2>
+
+
+                <span
+                    id="riskBadge"
+                ></span>
+
+
+            </div>
+
+
+
+            <!-- RISK -->
+
+            <div class="result-content">
+
+
+                <div class="risk-circle">
+
+                    <span
+                        id="riskIcon"
+                    ></span>
+
+                </div>
+
+
+                <div>
+
+
+                    <h3
+                        id="riskTitle"
+                    ></h3>
+
+
+                    <p
+                        id="riskDescription"
+                    ></p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= RECOMMENDATION ================= -->
+
+            <div class="recommendation-box">
+
+
+                <div
+                    class="recommendation-header"
+                >
+
+
+                    <h2>
+
+                        <i
+                            data-lucide="lightbulb"
+                        ></i>
+
+                        Recommendation Generator
+
+                    </h2>
+
+
+                    <p>
+
+                        Recommendation generated
+                        from the trained Y2038 dataset.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- INPUT -->
+
+                <div
+                    class="recommendation-section"
+                >
+
+
+                    <h4>
+
+                        <i
+                            data-lucide="code"
+                        ></i>
+
+                        Input
+
+                    </h4>
+
+
+                    <pre
+                        id="recommendationInput"
+                    ></pre>
+
+
+                </div>
+
+
+
+                <!-- RECOMMENDATION -->
+
+                <div
+                    class="recommendation-section"
+                >
+
+
+                    <h4>
+
+                        <i
+                            data-lucide="shield-check"
+                        ></i>
+
+                        Recommended Fix
+
+                    </h4>
+
+
+                    <p
+                        id="recommendationText"
+                    ></p>
+
+
+                </div>
+
+
+
+                <!-- MATCHED PATTERN -->
+
+                <div
+                    class="recommendation-section"
+                >
+
+
+                    <h4>
+
+                        <i
+                            data-lucide="database"
+                        ></i>
+
+                        Similar Dataset Pattern
+
+                    </h4>
+
+
+                    <pre
+                        id="matchedPattern"
+                    ></pre>
+
+
+                </div>
+
+
+
+                <!-- MATCHED RISK -->
+
+                <div
+                    class="recommendation-section"
+                >
+
+
+                    <h4>
+
+                        <i
+                            data-lucide="shield-alert"
+                        ></i>
+
+                        Pattern Risk
+
+                    </h4>
+
+
+                    <span
+                        id="matchedRisk"
+                    ></span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <div class="features">
+
+
+        <div class="feature-card">
+
+
+            <div class="feature-icon">
+
+                <i
+                    data-lucide="brain-circuit"
+                ></i>
+
+            </div>
+
+
+            <h3>
+                ML Powered
+            </h3>
+
+
+            <p>
+
+                Uses a trained Linear SVM model
+                to classify code risk levels.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+
+            <div class="feature-icon">
+
+                <i
+                    data-lucide="zap"
+                ></i>
+
+            </div>
+
+
+            <h3>
+                Fast Analysis
+            </h3>
+
+
+            <p>
+
+                Get code risk predictions
+                within seconds.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+
+            <div class="feature-icon">
+
+                <i
+                    data-lucide="shield-check"
+                ></i>
+
+            </div>
+
+
+            <h3>
+                Y2038 Protection
+            </h3>
+
+
+            <p>
+
+                Detect potential timestamp
+                overflow issues before they
+                become critical.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+    <p>
+
+        © 2026 CodeGuard AI |
+        Built with Machine Learning
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+async function analyzeCode() {
+
+
+    // ==========================================
+    // GET USER INPUT
+    // ==========================================
+
+    const code =
+        document
+        .getElementById("codeInput")
+        .value
+        .trim();
+
+
+    const language =
+        document
+        .getElementById("language")
+        .value;
+
+
+
+    // ==========================================
+    // VALIDATION
+    // ==========================================
+
+    if (code === "") {
+
+        alert(
+            "Please enter some code first!"
+        );
+
+        return;
+
+    }
+
+
+
+    // ==========================================
+    // BUTTON
+    // ==========================================
+
+    const button =
+        document.querySelector(
+            ".analyze-btn"
+        );
+
+
+    const originalButton =
+        button.innerHTML;
+
+
+    button.innerHTML =
+        "Analyzing...";
+
+
+    button.disabled = true;
+
+
+
+    try {
+
+
+        // ======================================
+        // SEND REQUEST TO FLASK
+        // ======================================
+
+        const response =
+            await fetch(
+
+                "http://127.0.0.1:5000/analyze",
+
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body: JSON.stringify({
+
+                        code: code,
+
+                        language: language
+
+                    })
+
+                }
+
+            );
+
+
+
+        // ======================================
+        // READ RESPONSE
+        // ======================================
+
+        const data =
+            await response.json();
+
+
+
+        console.log(
+            "Backend Response:",
+            data
+        );
+
+
+
+        // ======================================
+        // ERROR
+        // ======================================
+
+        if (!response.ok) {
+
+            throw new Error(
+
+                data.error ||
+                "Backend request failed"
+
+            );
+
+        }
+
+
+
+        // ======================================
+        // GET ELEMENTS
+        // ======================================
+
+        const result =
+            document.getElementById(
+                "result"
+            );
+
+
+        const riskBadge =
+            document.getElementById(
+                "riskBadge"
+            );
+
+
+        const riskTitle =
+            document.getElementById(
+                "riskTitle"
+            );
+
+
+        const riskDescription =
+            document.getElementById(
+                "riskDescription"
+            );
+
+
+        const riskIcon =
+            document.getElementById(
+                "riskIcon"
+            );
+
+
+
+        // ======================================
+        // SHOW RESULT
+        // ======================================
+
+        result.classList.remove(
+            "hidden"
+        );
+
+
+
+        // ======================================
+        // RISK
+        // ======================================
+
+        const risk =
+            String(data.risk)
+            .toLowerCase();
+
+
+
+        riskBadge.innerText =
+            risk.toUpperCase() +
+            " RISK";
+
+
+
+        // ======================================
+        // HIGH
+        // ======================================
+
+        if (risk === "high") {
+
+
+            riskIcon.innerHTML =
+                '<span class="risk-symbol high-symbol">!</span>';
+
+
+            riskTitle.innerText =
+                "Potential Y2038 Vulnerability Detected";
+
+
+            riskDescription.innerText =
+                "The machine learning model detected a high-risk code pattern related to Y2038 timestamp handling.";
+
+        }
+
+
+
+        // ======================================
+        // MEDIUM
+        // ======================================
+
+        else if (risk === "medium") {
+
+
+            riskIcon.innerHTML =
+                '<span class="risk-symbol medium-symbol">!</span>';
+
+
+            riskTitle.innerText =
+                "Potential Y2038 Risk Detected";
+
+
+            riskDescription.innerText =
+                "The machine learning model detected a potentially unsafe timestamp pattern that requires further review.";
+
+        }
+
+
+
+        // ======================================
+        // LOW
+        // ======================================
+
+        else {
+
+
+            riskIcon.innerHTML =
+                '<span class="risk-symbol low-symbol">✓</span>';
+
+
+            riskTitle.innerText =
+                "Low Y2038 Risk";
+
+
+            riskDescription.innerText =
+                "The machine learning model detected a low-risk pattern for Y2038-related issues.";
+
+        }
+
+
+
+        // ======================================
+        // INPUT
+        // ======================================
+
+        document
+            .getElementById(
+                "recommendationInput"
+            )
+            .textContent =
+                code;
+
+
+
+        // ======================================
+        // RECOMMENDATION
+        // ======================================
+
+        document
+            .getElementById(
+                "recommendationText"
+            )
+            .textContent =
+                data.recommendation;
+
+
+
+        // ======================================
+        // SIMILAR PATTERN
+        // ======================================
+
+        document
+            .getElementById(
+                "matchedPattern"
+            )
+            .textContent =
+                data.matched_pattern;
+
+
+
+        // ======================================
+        // MATCHED RISK
+        // ======================================
+
+        document
+            .getElementById(
+                "matchedRisk"
+            )
+            .textContent =
+                data.matched_risk;
+
+
+
+        // ======================================
+        // ICONS
+        // ======================================
+
+        lucide.createIcons();
+
+
+
+        // ======================================
+        // SCROLL
+        // ======================================
+
+        result.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start"
+
+        });
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(
+            "Connection Error:",
+            error
+        );
+
+
+        alert(
+
+            "Could not connect to the backend.\n\n" +
+
+            "Make sure Flask is running on:\n" +
+
+            "http://127.0.0.1:5000\n\n" +
+
+            "Error: " +
+            error.message
+
+        );
+
+    }
+
+
+    finally {
+
+
+        button.innerHTML =
+            originalButton;
+
+
+        button.disabled = false;
+
+
+        lucide.createIcons();
+
+    }
+
+}
+
+
+// ==========================================
+// INITIALIZE ICONS
+// ==========================================
+
+lucide.createIcons();
+
+
+</script>
+
+
+</body>
+
+</html>
