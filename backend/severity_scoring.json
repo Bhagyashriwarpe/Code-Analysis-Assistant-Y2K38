@@ -1,0 +1,5 @@
+{
+  "severity_values": {"LOW": 1, "MEDIUM": 3, "HIGH": 4, "CRITICAL": 5},
+  "weights": {"severity": 0.40, "reachability": 0.15, "production_exposure": 0.20, "persistence": 0.10, "external_dependency": 0.15},
+  "thresholds": {"critical": 4.5, "high": 3.5, "medium": 2.0}
+}

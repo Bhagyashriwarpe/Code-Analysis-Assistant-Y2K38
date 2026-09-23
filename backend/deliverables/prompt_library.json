@@ -1,0 +1,352 @@
+[
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int timestamp = time(NULL);",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: int timestamp = time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int timestamp = time(NULL);",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: int timestamp = time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int timestamp = time(NULL);",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: int timestamp = time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int timestamp = time(NULL);",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: int timestamp = time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int timestamp = time(NULL);",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: int timestamp = time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t timestamp = time(NULL);",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: time_t timestamp = time(NULL);",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t timestamp = time(NULL);",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: time_t timestamp = time(NULL);",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t timestamp = time(NULL);",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: time_t timestamp = time(NULL);",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t timestamp = time(NULL);",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: time_t timestamp = time(NULL);",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t timestamp = time(NULL);",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: time_t timestamp = time(NULL);",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long long timestamp = (long long)time(NULL);",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: long long timestamp = (long long)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long long timestamp = (long long)time(NULL);",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: long long timestamp = (long long)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long long timestamp = (long long)time(NULL);",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: long long timestamp = (long long)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long long timestamp = (long long)time(NULL);",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: long long timestamp = (long long)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long long timestamp = (long long)time(NULL);",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: long long timestamp = (long long)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int expiry = time(NULL)+86400;",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: int expiry = time(NULL)+86400;",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int expiry = time(NULL)+86400;",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: int expiry = time(NULL)+86400;",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int expiry = time(NULL)+86400;",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: int expiry = time(NULL)+86400;",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int expiry = time(NULL)+86400;",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: int expiry = time(NULL)+86400;",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int expiry = time(NULL)+86400;",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: int expiry = time(NULL)+86400;",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "uint64_t currentTime=(uint64_t)time(NULL);",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: uint64_t currentTime=(uint64_t)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "uint64_t currentTime=(uint64_t)time(NULL);",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: uint64_t currentTime=(uint64_t)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "uint64_t currentTime=(uint64_t)time(NULL);",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: uint64_t currentTime=(uint64_t)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "uint64_t currentTime=(uint64_t)time(NULL);",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: uint64_t currentTime=(uint64_t)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "uint64_t currentTime=(uint64_t)time(NULL);",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: uint64_t currentTime=(uint64_t)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long loginTime=time(NULL);",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: long loginTime=time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long loginTime=time(NULL);",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: long loginTime=time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long loginTime=time(NULL);",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: long loginTime=time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long loginTime=time(NULL);",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: long loginTime=time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "long loginTime=time(NULL);",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: long loginTime=time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int loginTime=(int)time(NULL);",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: int loginTime=(int)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int loginTime=(int)time(NULL);",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: int loginTime=(int)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int loginTime=(int)time(NULL);",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: int loginTime=(int)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int loginTime=(int)time(NULL);",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: int loginTime=(int)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int loginTime=(int)time(NULL);",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: int loginTime=(int)time(NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "struct timeval tv; gettimeofday(&tv,NULL);",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: struct timeval tv; gettimeofday(&tv,NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "struct timeval tv; gettimeofday(&tv,NULL);",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: struct timeval tv; gettimeofday(&tv,NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "struct timeval tv; gettimeofday(&tv,NULL);",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: struct timeval tv; gettimeofday(&tv,NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "struct timeval tv; gettimeofday(&tv,NULL);",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: struct timeval tv; gettimeofday(&tv,NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "struct timeval tv; gettimeofday(&tv,NULL);",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: struct timeval tv; gettimeofday(&tv,NULL);",
+    "source": "cppreference — C time()"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int alarmTime=now+3600;",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: int alarmTime=now+3600;",
+    "source": "Curated example based on official API/type semantics"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int alarmTime=now+3600;",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: int alarmTime=now+3600;",
+    "source": "Curated example based on official API/type semantics"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int alarmTime=now+3600;",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: int alarmTime=now+3600;",
+    "source": "Curated example based on official API/type semantics"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int alarmTime=now+3600;",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: int alarmTime=now+3600;",
+    "source": "Curated example based on official API/type semantics"
+  },
+  {
+    "language": "C",
+    "risk": "High",
+    "pattern": "int alarmTime=now+3600;",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: int alarmTime=now+3600;",
+    "source": "Curated example based on official API/type semantics"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t alarmTime=time(NULL)+3600;",
+    "prompt": "Analyze this C code for Year 2038 timestamp risk: time_t alarmTime=time(NULL)+3600;",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t alarmTime=time(NULL)+3600;",
+    "prompt": "Explain the Y2038 risk in this C pattern and provide a safe remediation: time_t alarmTime=time(NULL)+3600;",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t alarmTime=time(NULL)+3600;",
+    "prompt": "Review this C timestamp handling for 32-bit overflow: time_t alarmTime=time(NULL)+3600;",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t alarmTime=time(NULL)+3600;",
+    "prompt": "Suggest an idiomatic post-2038-safe fix for this C code: time_t alarmTime=time(NULL)+3600;",
+    "source": "cppreference — C/C++ time_t"
+  },
+  {
+    "language": "C",
+    "risk": "Medium",
+    "pattern": "time_t alarmTime=time(NULL)+3600;",
+    "prompt": "Classify the risk and explain the remediation rationale for this C pattern: time_t alarmTime=time(NULL)+3600;",
+    "source": "cppreference — C/C++ time_t"
+  }
+]

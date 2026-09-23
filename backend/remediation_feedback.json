@@ -1,0 +1,9 @@
+[
+  {
+    "code": "int timestamp = time(NULL);",
+    "language": "C",
+    "accepted_recommendation": true,
+    "corrected_recommendation": "Use int64_t for timestamp storage",
+    "edge_case": "Legacy 32-bit timestamp"
+  }
+]

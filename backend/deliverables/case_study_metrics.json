@@ -1,0 +1,130 @@
+{
+    "case_study_id": "ANONYMOUS_Y2038_AUDIT_001",
+    "description": "Anonymous technical metrics generated from the available Y2038 knowledge-base audit dataset.",
+    "scope": {
+        "dataset_type": "Y2038 time-overflow patterns",
+        "patterns_analyzed": 500,
+        "unique_patterns": 497,
+        "languages": 3
+    },
+    "risk_summary": {
+        "critical": 0,
+        "high": 213,
+        "medium": 106,
+        "low": 181
+    },
+    "technical_findings": {
+        "unsafe_findings": 319,
+        "safe_findings": 181
+    },
+    "recommendation_coverage": 100.0,
+    "source_coverage": 100.0,
+    "validation_coverage": 100.0,
+    "languages": {
+        "C": {
+            "patterns": 232,
+            "percentage": 46.4
+        },
+        "Java": {
+            "patterns": 209,
+            "percentage": 41.8
+        },
+        "C++": {
+            "patterns": 59,
+            "percentage": 11.8
+        }
+    },
+    "risk_distribution": {
+        "HIGH": {
+            "count": 213,
+            "percentage": 42.6
+        },
+        "LOW": {
+            "count": 181,
+            "percentage": 36.2
+        },
+        "MEDIUM": {
+            "count": 106,
+            "percentage": 21.2
+        }
+    },
+    "labels": {
+        "UNSAFE": {
+            "count": 319,
+            "percentage": 63.8
+        },
+        "SAFE": {
+            "count": 181,
+            "percentage": 36.2
+        }
+    },
+    "top_patterns": [
+        {
+            "pattern": "long long timestamp = (long long)time(NULL);",
+            "count": 2
+        },
+        {
+            "pattern": "long timestamp = 2147483648L;",
+            "count": 2
+        },
+        {
+            "pattern": "int timestamp = 2147483647;",
+            "count": 2
+        },
+        {
+            "pattern": "int timestamp = time(NULL);",
+            "count": 1
+        },
+        {
+            "pattern": "time_t timestamp = time(NULL);",
+            "count": 1
+        },
+        {
+            "pattern": "int expiry = time(NULL)+86400;",
+            "count": 1
+        },
+        {
+            "pattern": "uint64_t currentTime=(uint64_t)time(NULL);",
+            "count": 1
+        },
+        {
+            "pattern": "long loginTime=time(NULL);",
+            "count": 1
+        },
+        {
+            "pattern": "int loginTime=(int)time(NULL);",
+            "count": 1
+        },
+        {
+            "pattern": "struct timeval tv; gettimeofday(&tv,NULL);",
+            "count": 1
+        }
+    ],
+    "risk_by_language": {
+        "C": {
+            "HIGH": 110,
+            "LOW": 36,
+            "MEDIUM": 86
+        },
+        "C++": {
+            "HIGH": 20,
+            "LOW": 19,
+            "MEDIUM": 20
+        },
+        "Java": {
+            "HIGH": 83,
+            "LOW": 126,
+            "MEDIUM": 0
+        }
+    },
+    "methodology": {
+        "source": "Y2038_Knowledge_Base_v2.xlsx",
+        "processing": "Metrics were calculated directly from the supplied dataset.",
+        "anonymization": "No client names, personal identifiers, repository names, or customer-specific identifiers are included.",
+        "limitations": [
+            "The dataset contains technical patterns, not complete production application audits.",
+            "The metrics should not be presented as measured client production outcomes.",
+            "No remediation time savings or financial benefits are inferred unless explicitly present in the source data."
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "codeguard-ai-y2038",
+  "displayName": "CodeGuard AI Y2038",
+  "description": "Real-time Y2038 risk analysis and remediation for selected code.",
+  "version": "0.1.0",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Linters", "Other"],
+  "activationEvents": ["onCommand:codeguard.analyzeSelection", "onCommand:codeguard.remediateSelection"],
+  "main": "extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "codeguard.analyzeSelection", "title": "CodeGuard: Analyze Selection" },
+      { "command": "codeguard.remediateSelection", "title": "CodeGuard: Remediate Selection" }
+    ],
+    "configuration": {
+      "properties": {
+        "codeguard.backendUrl": { "type": "string", "default": "http://127.0.0.1:5000", "description": "CodeGuard AI backend URL" }
+      }
+    }
+  }
+}

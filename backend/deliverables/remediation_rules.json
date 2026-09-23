@@ -1,0 +1,38 @@
+[
+  {
+    "id": "c_int_epoch",
+    "language": "C",
+    "pattern": "\\bint\\s+(?P<name>[A-Za-z_]\\w*)\\s*=\\s*(?:\\(\\s*int\\s*\\)\\s*)?time\\s*\\(\\s*NULL\\s*\\)",
+    "replacement": "int64_t {name} = time(NULL)",
+    "required_include": "#include <stdint.h>",
+    "risk_target": "LOW",
+    "reason": "A 32-bit integer is being used to store a Unix-epoch value."
+  },
+  {
+    "id": "c_int_epoch_expression",
+    "language": "C",
+    "pattern": "\\bint\\s+(?P<name>[A-Za-z_]\\w*)\\s*=\\s*(?:\\(\\s*int\\s*\\)\\s*)?time\\s*\\(\\s*NULL\\s*\\)\\s*(?P<expr>[+\\-*/].*)",
+    "replacement": "int64_t {name} = time(NULL) {expr}",
+    "required_include": "#include <stdint.h>",
+    "risk_target": "LOW",
+    "reason": "A 32-bit integer is being used for timestamp arithmetic."
+  },
+  {
+    "id": "cpp_int_epoch",
+    "language": "C++",
+    "pattern": "\\bint\\s+(?P<name>[A-Za-z_]\\w*)\\s*=\\s*(?:\\(\\s*int\\s*\\)\\s*)?(?:std::)?time\\s*\\(\\s*(?:NULL|nullptr)\\s*\\)",
+    "replacement": "std::int64_t {name} = std::time(nullptr)",
+    "required_include": "#include <cstdint>",
+    "risk_target": "LOW",
+    "reason": "A 32-bit integer narrows a Unix-epoch value."
+  },
+  {
+    "id": "java_int_epoch",
+    "language": "Java",
+    "pattern": "\\bint\\s+(?P<name>[A-Za-z_]\\w*)\\s*=\\s*\\(\\s*int\\s*\\)\\s*\\(?(?P<expr>System\\.currentTimeMillis\\s*\\(\\s*\\)\\s*/\\s*1000|Instant\\.now\\s*\\(\\s*\\)\\.getEpochSecond\\s*\\(\\s*\\))(?:\\s*\\+\\s*[^;]+)?\\)?",
+    "replacement": "long {name} = {expr}",
+    "required_include": null,
+    "risk_target": "LOW",
+    "reason": "A 32-bit Java integer is narrowing an epoch value."
+  }
+]
